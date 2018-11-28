@@ -12,7 +12,7 @@ class SongsController < ApplicationController
 
   post '/songs' do
     @song = Song.create(params)
-    if @song.artist 
+    if @song.artist
       @song.artist = Artist.create(params[:artist])
     end
     @song.save
