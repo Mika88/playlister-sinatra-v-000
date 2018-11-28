@@ -11,6 +11,7 @@ class SongsController < ApplicationController
   end
 
   post '/songs' do
+    binding.pry
     @song = Song.create(params)
     if @song.artist
       @song.artist = Artist.create(params[:artist])
