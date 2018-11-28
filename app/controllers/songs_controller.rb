@@ -14,10 +14,8 @@ class SongsController < ApplicationController
     binding.pry
     @song = Song.create(params[:song])
     @song.artist = Artist.create(params[:artist])
-    
-    @song.genres
-    end
     @song.save
+    
     redirect "songs/#{@song.slug}"
   end
 
